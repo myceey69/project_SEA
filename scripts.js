@@ -24,15 +24,32 @@
  */
 
 
-const FRESH_PRINCE_URL = "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
-const CURB_POSTER_URL = "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
-const EAST_LOS_HIGH_POSTER_URL = "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
+
+const FAST_AND_FURIOUS_3_POSTER = "https://m.media-amazon.com/images/I/71ql8kIrPKL._AC_UF894,1000_QL80_.jpg";
+const OPPENHEIMER_POSTER =  "https://m.media-amazon.com/images/I/71xDtUSyAKL._AC_UF894,1000_QL80_.jpg";
+const THE_DARK_KNIGHT_POSTER = "https://m.media-amazon.com/images/I/818hyvdVfvL._AC_UF894,1000_QL80_.jpg"; 
+const MATRIX_POSTER = "https://m.media-amazon.com/images/I/71PfZFFz9yL._AC_UF894,1000_QL80_.jpg";
+const INTERESTELLAR_POSTER = "https://m.media-amazon.com/images/I/71dN1QYnf+L._AC_UF894,1000_QL80_.jpg"; 
+const PARASITE_POSTER = "https://m.media-amazon.com/images/I/91KArYP03YL._AC_UF894,1000_QL80_.jpg	"; 
+const AVENGERS_INFINITY_WAR_POSTER = "https://m.media-amazon.com/images/I/91E4iLIWgHL._AC_UF894,1000_QL80_.jpg"; 
+const BACK_TO_THE_FUTURE_POSTER = "https://i.ebayimg.com/images/g/Ks4AAOSwiCBgiDga/s-l1200.webp"; 
+const ROCKY_POSTER = "https://m.media-amazon.com/images/I/61qNMpgcPfL._AC_UF894,1000_QL80_.jpg"; 
+const KUNG_FU_HUSTLER_POSTER = "https://m.media-amazon.com/images/I/71m93EonyZL._AC_UF894,1000_QL80_.jpg";
+
 
 // This is an array of strings (TV show titles)
 let titles = [
-    "Fresh Prince of Bel Air",
-    "Curb Your Enthusiasm",
-    "East Los High"
+    "Tokyo Drift",
+    "Oppenheimer",
+    "The Dark Knight",
+	"Matrix",
+	"Interestellar",
+	"Parasite",
+	"Avengers",	
+	"Back to the Future",
+	"Rocky",
+	"Kung Fu Hustler"
+	
 ];
 // Your final submission should have much more data than this, and 
 // you should use more than just an array of strings to store it all.
@@ -44,18 +61,33 @@ function showCards() {
     cardContainer.innerHTML = "";
     const templateCard = document.querySelector(".card");
     
-    for (let i = 0; i < titles.length; i++) {
+    for (let i = 0; i < titles.length; ++i) {
         let title = titles[i];
+ 
 
         // This part of the code doesn't scale very well! After you add your
         // own data, you'll need to do something totally different here.
         let imageURL = "";
         if (i == 0) {
-            imageURL = FRESH_PRINCE_URL;
+            imageURL = FAST_AND_FURIOUS_3_POSTER;
         } else if (i == 1) {
-            imageURL = CURB_POSTER_URL;
+            imageURL = OPPENHEIMER_POSTER;
         } else if (i == 2) {
-            imageURL = EAST_LOS_HIGH_POSTER_URL;
+            imageURL = THE_DARK_KNIGHT_POSTER;
+        } else if (i == 3) {
+            imageURL = MATRIX_POSTER;
+        } else if (i == 4) {
+            imageURL = INTERESTELLAR_POSTER;
+        } else if (i == 5) {
+            imageURL = PARASITE_POSTER;
+        } else if (i == 6) {
+            imageURL = AVENGERS_INFINITY_WAR_POSTER;
+        } else if (i == 7) {
+            imageURL = BACK_TO_THE_FUTURE_POSTER;
+        } else if (i == 8) {
+            imageURL = ROCKY_POSTER;
+        } else if (i == 9) {
+            imageURL = KUNG_FU_HUSTLER_POSTER;
         }
 
         const nextCard = templateCard.cloneNode(true); // Copy the template card
