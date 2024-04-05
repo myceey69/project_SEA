@@ -2,8 +2,10 @@ html,
 body {
     margin: 0;
     padding: 0;
+    background: linear-gradient(45deg, #FFC0CB, #87CEEB); /* Gradient from pink to sky blue */
 }
 
+/* Your existing CSS styles */
 a {
     margin-right: 70px; /* Adjust as needed */
 }
@@ -23,17 +25,19 @@ a {
 }
 
 #card-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns with equal width */
+    grid-gap: 20px; /* Adjust the gap between cards */
+    justify-items: center; /* Center items horizontally */
     margin: 20px;
 }
 
 .card {
-    width: 300px;
+    width: 100%; /* Each card occupies the entire width of its grid cell */
+    max-width: 300px; /* Set a maximum width for the card */
     border: 1px solid #ff00ff; /* Changed border color to magenta */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 5px;
 }
 
 .card-content {
@@ -71,4 +75,20 @@ button {
     font-size: 22px;
     cursor: pointer;
     margin: 5px;
+}
+
+button a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set text color to white */
+}
+
+.form-control {
+	text-align: center;
+	margin-bottom: 25px; 
+}
+
+form {
+	margin: 50px auto; 
+	padding: 30px 30px; 
+	max-width: 500px; 
 }
