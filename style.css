@@ -4,6 +4,10 @@ body {
     padding: 0;
 }
 
+a {
+    margin-right: 70px; /* Adjust as needed */
+}
+
 .main-header {
     background-color: rgba(255, 252, 0, 0.3); /* Changed background color to red with some transparency */
     padding-bottom: 10px;
